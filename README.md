@@ -1,8 +1,10 @@
 # Gemini wallpaper capture
 
-A Mac script that screenshots one fixed rectangle, then sends every shot through a single Gemini chat in Safari and saves the results as wallpapers.
+This is a personal wallpaper tool for artwork saved from Instagram.
 
-Nothing runs on a schedule. It runs only when you start it.
+I follow a lot of cool artwork accounts. A post is often a carousel of several slides. This program screenshots a chosen number of those slides, then sends each one through Gemini to extend and upscale it so I can use the results as wallpapers on my own computer.
+
+Nothing runs on a schedule. It runs only when you start it, with an Instagram post already open on screen.
 
 ## What a run does
 
@@ -14,7 +16,7 @@ Replace `5` with how many screenshots you want.
 
 1. Waits until the Mac is unlocked.
 2. Wakes the display.
-3. Captures the rectangle in `config.env` that many times. After every shot except the last, it clicks the point in `config.env` and waits one second. Use that click to advance whatever is on screen between shots.
+3. Captures the rectangle in `config.env` that many times. That rectangle should frame one slide of the post. After every shot except the last, it clicks the point in `config.env` and waits one second. Put that point on Instagram's next-slide control so each screenshot is the next image in the carousel.
 4. Opens one new Gemini tab in Safari, starts one new chat, and attaches each screenshot there with the same prompt.
 5. Downloads Gemini's full-size image and saves it as a PNG.
 6. Deletes the original screenshot only after that wallpaper file exists and is not empty.
