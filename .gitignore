@@ -1,0 +1,4 @@
+node_modules/
+config.env
+wait-for-unlock
+.DS_Store
